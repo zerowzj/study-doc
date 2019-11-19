@@ -1,0 +1,50 @@
+version: '3'
+services:
+  study-springcloud-eureka:
+    image: study/study-springcloud-eureka:1
+    restart: always
+    ports:
+      - 7010:7010
+    volumes:
+      - /xdfapp:/xdfapp
+    networks:
+      - demo_net
+  study-springcloud-zuul:
+    image: study/study-springcloud-zuul:1
+    restart: always
+    ports:
+      - 7020:7020
+    volumes:
+      - /xdfapp:/xdfapp
+    networks:
+      - demo_net
+  study-springcloud-oauth2:
+    image: study/study-springcloud-oauth2:1
+    restart: always
+    ports:
+      - 7030:7030
+    volumes:
+      - /xdfapp:/xdfapp
+    networks:
+      - demo_net
+  study-springcloud-provider:
+    image: study/study-springcloud-provider:1
+    restart: always
+    ports:
+      - 7090:7090
+    volumes:
+      - /xdfapp:/xdfapp
+    networks:
+      - demo_net
+  study-springcloud-consumer:
+    image: study/study-springcloud-consumer:1
+    restart: always
+    ports:
+      - 7080:7080
+    volumes:
+      - /xdfapp:/xdfapp
+    networks:
+      - demo_net
+networks:
+  demo_net:
+    external: true

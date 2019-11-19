@@ -1,0 +1,10 @@
+version: '3'
+services:
+  demo-app:
+    image: demo/demo-app:1
+    ports:
+      - 9090:9090
+  study-springcloud-eureka:
+    image: study/study-springcloud-eureka:1
+    ports:
+      - 7070:7070
