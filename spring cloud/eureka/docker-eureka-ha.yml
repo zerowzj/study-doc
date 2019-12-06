@@ -24,6 +24,18 @@ services:
       - /xdfapp:/xdfapp
     networks:
       - demo_net
+  study-springcloud-eureka-3:
+    image: study/study-springcloud-eureka:1
+    restart: always
+    ports:
+      - 7103:7100
+    environment:
+      - eureka.instance.name=eureka-server3
+      - ADDITIONAL_EUREKA_SERVER_LIST=http://eureka-server1:7101/eureka/
+    volumes:
+      - /xdfapp:/xdfapp
+    networks:
+      - demo_net
 networks:
   demo_net:
     external: true
