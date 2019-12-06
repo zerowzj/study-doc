@@ -4,7 +4,7 @@ services:
     image: study/study-springcloud-eureka:1
     restart: always
     ports:
-      - 7100:7110
+      - 7100:7101
     volumes:
       - /xdfapp:/xdfapp
     networks:
@@ -13,7 +13,7 @@ services:
     image: study/study-springcloud-eureka:1
     restart: always
     ports:
-      - 7100:7120
+      - 7100:7102
     volumes:
       - /xdfapp:/xdfapp
     networks:
