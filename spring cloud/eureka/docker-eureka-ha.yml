@@ -9,15 +9,15 @@ services:
       - /xdfapp:/xdfapp
     networks:
       - demo_net
-  study-springcloud-eureka-2:
-    image: study/study-springcloud-eureka:1
-    restart: always
-    ports:
-      - 7110:7110
-    volumes:
-      - /xdfapp:/xdfapp
-    networks:
-      - demo_net
+#  study-springcloud-eureka-2:
+#    image: study/study-springcloud-eureka:1
+#    restart: always
+#    ports:
+#      - 7100:7120
+#    volumes:
+#      - /xdfapp:/xdfapp
+#    networks:
+#      - demo_net
 networks:
   demo_net:
     external: true
