@@ -2,36 +2,40 @@ version: '3'
 services:
   study-springcloud-eureka:
     image: study/study-springcloud-eureka:1
-    restart: always
     ports:
       - 7100:7100
+    restart: always
     volumes:
       - /xdfapp:/xdfapp
     networks:
       - study_net
   study-springcloud-zuul:
     image: study/study-springcloud-zuul:1
-    restart: always
     ports:
       - 7200:7200
-    volumes:
-      - /xdfapp:/xdfapp
-    networks:
-      - study_net
-  study-springcloud-provider:
-    image: study/study-springcloud-provider:1
     restart: always
-    ports:
-      - 7300:7300
+    environment:
+      - EUREKA_SERVER_LIST=http://114.67.102.8:7100/eureka/
     volumes:
       - /xdfapp:/xdfapp
     networks:
       - study_net
+  #  study-springcloud-provider:
+  #    image: study/study-springcloud-provider:1
+  #    restart: always
+  #    ports:
+  #      - 7300:7300
+  #    volumes:
+  #      - /xdfapp:/xdfapp
+  #    networks:
+  #      - study_net
   study-springcloud-client-rest:
     image: study/study-springcloud-client-rest:1
-    restart: always
     ports:
       - 7400:7400
+    restart: always
+    environment:
+      - EUREKA_SERVER_LIST=http://114.67.102.8:7100/eureka/
     volumes:
       - /xdfapp:/xdfapp
     networks:
