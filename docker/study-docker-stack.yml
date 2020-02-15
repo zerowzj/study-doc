@@ -20,6 +20,10 @@ services:
       - EUREKA_SERVER_LIST=http://114.67.102.8:7100/eureka/
     volumes:
       - /xdfapp:/xdfapp
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "3m"
     networks:
       - study_net
   #  study-springcloud-provider:
