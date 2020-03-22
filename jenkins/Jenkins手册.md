@@ -1,4 +1,4 @@
-# 1. 运维
+# 	1. 安装
 
 ## 1.1 WAR
 
@@ -24,10 +24,11 @@
 
 ### 1.2.2 目录
 
-- /usr/lib/jenkins/jenkins.war（WAR包 ）
+- /usr/lib/jenkins/jenkins.war（war包 ）
 - /etc/sysconfig/jenkins（ 配置文件）
-- /var/lib/jenkins/（默认的JENKINS_HOME目录）
-- /var/log/jenkins/jenkins.log（Jenkins日志文件）
+- /var/lib/jenkins/（默认的JENKINS_HOME目录，主目录）
+- /var/log/jenkins/jenkins.log（日志文件）
+- /etc/init``.d``/jenkins（启动文件）
 
 # 2. 配置
 
@@ -43,7 +44,7 @@
 2. Maven配置
 3. Git配置
 
-## 2.5 创建管理
+## 2.5 插件管理
 
 1. 中文插件
 2. git插件
