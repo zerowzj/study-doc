@@ -29,10 +29,30 @@
    systemctl disabled firewalld
    ```
 
-4. 查看系统打开端口列表
+4. 端口管理
 
-   ```shell
-   firewall-cmd --zone=public --list-port
-   ```
+   - 查看系统打开端口列表
 
-5. 
+     ```shell
+     firewall-cmd --zone=public --list-port
+     ```
+
+5. 服务管理
+
+   - 查看当前开了哪些服务
+
+     ```shell
+     #这里的每一个服务名对应对应/usr/lib/firewalld/services下面一个xml文件
+     #文件有描述该服务用了什么协议，对应的端口号，这些端口即为外界可以访问的端口
+     firewall-cmd --list-services
+     ```
+
+   - 查看还有哪些服务可以打开
+
+     ```shell
+     firewall-cmd --get-services
+     ```
+
+     
+
+   
