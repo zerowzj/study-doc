@@ -36,6 +36,20 @@
      ```shell
      firewall-cmd --zone=public --list-port
      ```
+     
+   - 开放端口
+
+     ```shell
+     firewall-cmd --zone=public --add-port=8080/tcp --permanent
+     ```
+
+   - 重新载入一下防火墙设置，使设置生效
+
+     ```shell
+     firewall-cmd --reload
+     ```
+
+     
 
 5. 服务管理
 

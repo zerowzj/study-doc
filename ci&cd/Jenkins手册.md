@@ -2,8 +2,6 @@
 
 ## 1.1 WAR
 
-
-
 ## 1.2 RPM
 
 ### 1.2.1 安装
@@ -14,20 +12,24 @@
    rpm -ivh jenkins-2.204.4-1.1.noarch.rpm
    ```
 
-2. 编辑/etc/init.d/jenkins，添加JDK路径
+2. 编辑/etc/init.d/jenkins，添加java命令
+
+   ```shell
+   /usr/local/jdk1.8.0_162/bin/java
+   ```
 
 3. 启停
 
    ```shell
-   servcie jenkins start/stop/restart
+   service jenkins status/start/stop/restart
    ```
 
 ### 1.2.2 目录
 
-- /usr/lib/jenkins/jenkins.war（war包 ）
-- /etc/sysconfig/jenkins（ 配置文件）
 - /var/lib/jenkins/（默认的JENKINS_HOME目录，主目录）
+- /etc/sysconfig/jenkins（ 配置文件）
 - /var/log/jenkins/jenkins.log（日志文件）
+- /usr/lib/jenkins/jenkins.war（war包 ）
 - /etc/init``.d``/jenkins（启动文件）
 
 # 2. 配置
