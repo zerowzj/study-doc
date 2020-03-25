@@ -47,10 +47,30 @@
 ## 2.5 插件管理
 
 1. 中文插件
+
 2. git插件
-3. git参数化插件
-4. 时间戳插件
-5. 超时插件
+
+3. 构建参数
+
+   - Git Parameter
+
+     这是一个参数构建扩展，可以在构建的时候选择git的某一个分支来构建服务。在参数化构建步骤当中，可添加Git的branch或者tag来作为参数进行构建
+
+   - Build with Parameters
+
+4. Git Publisher
+
+5. 时间戳插件
+
+   - Zentimestamp
+
+     系统管理 --> 系统设置 --> 全局属性设置日期和时间格式，变量名问BUILD_TIMESTAMP。
+
+6. 超时插件
+
+7. workspace cleanup
+
+   每次build之前删除workspace目录下指定的文件
 
 # 3. 使用
 
