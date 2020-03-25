@@ -26,21 +26,21 @@
 
 ### 1.2.2 目录
 
-- /etc/sysconfig/jenkins（ 配置文件）
+1. /etc/sysconfig/jenkins（ 配置文件）
 
-  可配置JENKINS_HOME、JENKINS_JAVA_OPTIONS、JENKINS_PORT等端口
+   可配置JENKINS_HOME、JENKINS_JAVA_OPTIONS、JENKINS_PORT等端口
 
-- /var/lib/jenkins/（默认的JENKINS_HOME目录，主目录）
+2. /var/lib/jenkins/（默认的JENKINS_HOME目录，主目录）
 
-  1. workspace
-  2. jobs
-  3. 
+   - workspace
+   - jobs
+   - .m2（隐藏目录）
 
-- /var/log/jenkins/jenkins.log（日志文件）
+3. /var/log/jenkins/jenkins.log（日志文件）
 
-- /usr/lib/jenkins/jenkins.war（war包 ）
+4. /usr/lib/jenkins/jenkins.war（war包 ）
 
-- /etc/init``.d``/jenkins（启动文件）
+5. /etc/init``.d``/jenkins（启动文件）
 
 # 2. 配置
 
@@ -52,9 +52,10 @@
 
 ## 2.4 全局工具配置
 
-1. JDK配置
-2. Maven配置
-3. Git配置
+1. Maven settings.xml配置
+2. JDK配置
+3. Maven配置
+4. Git配置
 
 ## 2.5 插件管理
 
@@ -88,7 +89,22 @@
 
 # 3. 使用
 
-## 3.1 任务
+## 3.1 新建任务
 
-1. General
-   - 12321
+### 3.1.1 General
+
+1. 丢弃旧的构建
+2. 参数化构建过程
+
+### 3.1.2 **源码管理**
+
+### 3.1.3 构建触发器
+
+### 3.1.4 构建
+
+1. 调用顶层Maven目标
+2. 执行shell
+
+### 3.1.5 构建后操作
+
+1. Git Pulisher
