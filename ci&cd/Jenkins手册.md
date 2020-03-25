@@ -26,10 +26,20 @@
 
 ### 1.2.2 目录
 
-- /var/lib/jenkins/（默认的JENKINS_HOME目录，主目录）
 - /etc/sysconfig/jenkins（ 配置文件）
+
+  可配置JENKINS_HOME、JENKINS_JAVA_OPTIONS、JENKINS_PORT等端口
+
+- /var/lib/jenkins/（默认的JENKINS_HOME目录，主目录）
+
+  1. workspace
+  2. jobs
+  3. 
+
 - /var/log/jenkins/jenkins.log（日志文件）
+
 - /usr/lib/jenkins/jenkins.war（war包 ）
+
 - /etc/init``.d``/jenkins（启动文件）
 
 # 2. 配置
@@ -50,9 +60,11 @@
 
 1. 中文插件
 
-2. git插件
+2. Git插件
 
 3. 构建参数
+
+   - Git插件
 
    - Git Parameter
 
