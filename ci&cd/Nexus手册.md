@@ -1,43 +1,44 @@
 # 	1. 安装
 
-## 1.1 本机安装
+1. 解压到指定目录/usr/server/nexus3
 
-1. 12321
-2. 121
-3. 121
+   ```shell
+   tar -zxvf nexus-3.12.1-01-unix.tar.gz -C /usr/server/nexus3  
+   ```
 
-## 1.2 docker安装
+2. 配置用户
 
-1. 12321
-2. 213123
-3. 123123
-4. 123
+   ```shell
+   #添加用户
+   useradd nexus
+   #赋权
+   chown -R nexus:nexus /usr/server/nexus3
+   
+   #切换用户
+   su nexus
+   ```
+
+3. 启动，执行/nexus-3.12.1-01/bin命令
+
+   ```shell
+   ./nexus start/stop/run/run-redirect/status/restart/force-reload
+   ```
+
+4. 访问http://<IP>:8081，默认用户和密码admin/admin123
 
 # 2. 配置
 
-## 2.1 系统设置
+1. nexus-3.12.1-01/etc/nexus-default.properties
 
-## 2.2 全局安全设置
+# 3. 仓库类型
 
-## 2.3 凭据配置
 
-## 2.4 全局工具配置
 
-1. JDK配置
-2. Maven配置
-3. Git配置
 
-## 2.5 创建管理
 
-1. 中文插件
-2. git插件
-3. git参数化插件
-4. 时间戳插件
-5. 超时插件
 
-# 3. 使用
 
-## 3.1 任务
 
-1. General
-   - 12321
+
+
+
