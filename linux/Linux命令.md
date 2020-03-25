@@ -8,12 +8,10 @@
    #
    servcie firewalld status
    #
-   firewalld-cmd --state
+   firewall-cmd --state
    ```
 
-   
-
-2. 启停及查看状态
+2. 启停
 
    ```shell
    #
