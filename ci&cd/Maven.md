@@ -1,4 +1,4 @@
-
+阿萨德
 
 
 
@@ -107,6 +107,22 @@
 ## 1.13 repositories
 
 ## 1.14 pluginRepositories
+
+
+
+# 1.  命令参数
+
+| 命令参数      | 备注                                                         |
+| ------------- | ------------------------------------------------------------ |
+| mvn -Pxxx     | 激活 id 为 xxx的profile（如有多个，用逗号隔开）              |
+| mvn -Dxxx=yyy | 指定Java全局属性                                             |
+|               |                                                              |
+| mvn -U        | 强制更新snapshot类型的插件或依赖库（否则maven一天只会更新一次snapshot依赖） |
+| mvn -f        | --file <file> 强制使用备用的POM文件                          |
+| mvn -pl       | --module_name 在指定模块上执行命令                           |
+|               |                                                              |
+| mvn -X        | --debug 控制Maven的日志级别,产生执行调试信息                 |
+|               |                                                              |
 
 
 

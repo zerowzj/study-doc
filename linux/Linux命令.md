@@ -1,6 +1,6 @@
 # 1.软件安装卸载
 
-## 1.1 RPM
+## 1.1 rpm
 
 ```shell
 #查询到当前系统中安装的所有的软件包
@@ -11,7 +11,15 @@ rpm -qa | grep "pcre"
 rpm -ql pcre-7.8-7.el6.x86_64
 ```
 
-## 1.2 
+## 1.2 yum
+
+```shell
+yum -y install lrzsz
+```
+
+
+
+## 1.3 wget
 
 # 2. 防火墙
 
