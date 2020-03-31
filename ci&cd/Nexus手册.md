@@ -92,7 +92,7 @@ su nexus
 
 ### 1.2.3 服务启动
 
-1. 进入目录/etc/init.d或/etc/rc.d/init.d，新建nexus.sh脚本
+1. 进入目录/etc/init.d或/etc/rc.d/init.d，新建nexus脚本
 
    ```
    
@@ -108,12 +108,11 @@ su nexus
 
    ```shell
    #
-   service nexus.sh start
+   service nexus start
    #
-   service nexus.sh stop
+   service nexus stop
    ```
 
-   
 
 ### 1.2.4 启动日志
 
