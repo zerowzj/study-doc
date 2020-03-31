@@ -45,7 +45,7 @@ su nexus
    - http://<IP>:8081/nexus（2.x）
    - http://<IP>:8081 （3.x）
 
-### 1.2.2 服务启动
+### 1.2.2 服务启动（systemctl）
 
 1. 在目录/lib/systemd/system下创建文件nexus.service
 
@@ -90,18 +90,40 @@ su nexus
    systemctl enable nexus.service
    ```
 
-### 1.2.3 服务启动
+### 1.2.3 服务启动（service）
 
 1. 进入目录/etc/init.d或/etc/rc.d/init.d，新建nexus脚本
 
-   ```
+   ```shell
+   #!/bin/sh
+   #chkconfig:2345 20 90
+   #description:nexus
+   #processname:nexus
    
+   NEXUS_HOME=/usr/server/nexus2/nexus-2.14.16-01
+   case $1 in
+   start)
+     sudo $NEXUS_HOME/bin/nexus start
+     ;;
+   stop)
+     sudo $NEXUS_HOME/bin/nexus stop
+     ;;
+   status)
+     sudo $NEXUS_HOME/bin/nexus status
+     ;;
+   restart)
+     sudo $NEXUS_HOME/bin/nexus restart
+     ;;
+   *)
+     echo "Usage: nexus {start|stop|status|restart}"
+     ;;
+   esac
    ```
 
 2. 设置脚本权限
 
    ```
-   chmod +x /etc/init.d/nexus
+   chmod a+x /etc/init.d/nexus
    ```
 
 3. 服务启停
@@ -113,6 +135,13 @@ su nexus
    service nexus stop
    ```
 
+4. 设置开机启动
+
+   ```
+   sudo chckconfig --add nexus
+   ```
+
+   
 
 ### 1.2.4 启动日志
 
