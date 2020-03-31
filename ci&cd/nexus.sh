@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# chkconfig:2345 20 90
-# description:nexus
-# processname:nexus
+#chkconfig:2345 20 90
+#description:nexus
+#processname:nexus
 
 NEXUS_HOME=/usr/server/nexus2/nexus-2.14.16-01
 
 case $1 in
 start)
-  sudo $NEXUS_HOME/bin/nexus start
+  sudo /usr/server/nexus2/nexus-2.14.16-01/bin/nexus start
   ;;
 stop)
   sudo $NEXUS_HOME/bin/nexus stop
