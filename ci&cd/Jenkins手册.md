@@ -21,14 +21,28 @@
 3. 启停
 
    ```shell
-   service jenkins status/start/stop/restart
+   #
+   service jenkins status
+   #
+   service jenkins start
+   #
+   service jenkins stop
+   #
+   service jenkins restart
    ```
 
 ### 1.2.2 目录
 
 1. /etc/sysconfig/jenkins（ 配置文件）
 
-   可配置JENKINS_HOME、JENKINS_JAVA_OPTIONS、JENKINS_PORT等端口
+   ```shell
+   #主目录
+   JENKINS_HOME=
+   #用户
+   JENKINS_USER=
+   #端口
+   JENKINS_PORT=
+   ```
 
 2. /var/lib/jenkins/（默认的JENKINS_HOME目录，主目录）
 
@@ -40,7 +54,7 @@
 
 4. /usr/lib/jenkins/jenkins.war（war包 ）
 
-5. /etc/init``.d``/jenkins（启动文件）
+5. /etc/init.d/jenkins（启动文件）
 
 # 2. 配置
 
@@ -64,8 +78,6 @@
 2. Git插件
 
 3. 构建参数
-
-   - Git插件
 
    - Git Parameter
 
@@ -108,3 +120,15 @@
 ### 3.1.5 构建后操作
 
 1. Git Pulisher
+
+
+
+# 4. 问题
+
+1. 插件下载超时
+
+   使用 https://github.com/jenkins-zh/mirror-adapter
+
+2. jenkins默认会场景jenkins用户和jenkins组，对文件夹或文件读写要有权限
+
+   

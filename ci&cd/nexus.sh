@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# chkconfig:2345 20 90
+# description:nexus
+# processname:nexus
+
+NEXUS_HOME=/usr/server/nexus2/nexus-2.14.16-01
+
+case $1 in
+start)
+  sudo $NEXUS_HOME/bin/nexus start
+  ;;
+stop)
+  sudo $NEXUS_HOME/bin/nexus stop
+  ;;
+status)
+  sudo $NEXUS_HOME/bin/nexus status
+  ;;
+restart)
+  sudo $NEXUS_HOME/bin/nexus restart
+  ;;
+*)
+  echo "Usage: nexus {start|stop|status|restart}"
+  ;;
+esac
