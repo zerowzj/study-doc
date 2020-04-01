@@ -218,7 +218,7 @@ service my_service status
 
 ## 9.2 普通用户分配root权限
 
-1. 123
+1. 创建用户
 
    ```shell
    #创建用户
@@ -228,7 +228,15 @@ service my_service status
    #分配组
    ```
 
-2. 免密码，编辑/etc/sudoers
+2. 分配root权限
+
+   ```
+   
+   ```
+
+   
+
+3. 免密码，编辑/etc/sudoers
 
    
 
